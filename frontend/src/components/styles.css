@@ -1,0 +1,11 @@
+.card1{
+    margin-top: 10px;
+    margin-bottom: 20px;
+    border-radius: 3px;
+    box-shadow: 100px;
+    border-width: 5px;
+    border-color: black;
+}
+.btnAlign{
+    padding-left: 250px;
+}
