@@ -5,7 +5,11 @@
     box-shadow: 100px;
     border-width: 5px;
     border-color: black;
+    padding: 20px;
 }
 .btnAlign{
-    padding-left: 250px;
+    padding-left: 650px;
+}
+.align{
+    padding-left: 400px;
 }

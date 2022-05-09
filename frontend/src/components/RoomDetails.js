@@ -22,9 +22,9 @@ export default class RoomDetails extends Component {
     });
   }
   render() {
-      const {RoomType,Sleep,TodayPrice,Facilities,Other} = this.state.post;
+      const {RoomType,Sleep,TodayPrice,Facilities,Other, Availability} = this.state.post;
       return(
-        <div style={{marginTop:'20px'}}>
+        <div className='text-center'>
           <h1>{RoomType}</h1>
           <hr/>
           <dl className="row">
@@ -36,9 +36,11 @@ export default class RoomDetails extends Component {
             <dd className="col-sm-9">{Facilities}</dd>
             <dt className="col-sm-3">Other</dt>
             <dd className="col-sm-9">{Other}</dd>
+            <dt className="col-sm-3">Availability</dt>
+            <dd className="col-sm-9">{Availability}</dd>
             
           </dl>
-         
+        
         </div>
     )
   }

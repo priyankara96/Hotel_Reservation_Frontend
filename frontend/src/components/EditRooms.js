@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import axios from 'axios';
+import swal from "sweetalert";
 
 export default class EditRooms extends Component {
 
@@ -10,7 +11,8 @@ export default class EditRooms extends Component {
       Sleep: "",
       TodayPrice: "",
       Facilities:"",
-      Other:""
+      Other:"",
+      Availability:""
     }
   }
 
@@ -26,33 +28,38 @@ export default class EditRooms extends Component {
     e.preventDefault();
     const id = this.props.match.params.id;
 
-    const { RoomType, Sleep, TodayPrice, Facilities, Other } = this.state;
+    const { RoomType, Sleep, TodayPrice, Facilities, Other, Availability } = this.state;
 
     const data = {
       RoomType: RoomType,
       Sleep: Sleep,
       TodayPrice: TodayPrice,
       Facilities: Facilities,
-      Other: Other
+      Other: Other,
+      Availability: Availability
     
-}
+};
 console.log(data);
+
 axios.put(`http://localhost:8000/rooms/update/${id}`,data).then((res) =>{
   if(res.data.success){
-    alert("Post updated Successfully")
+    // alert("Post updated Successfully")
+    swal("Update Successful", "Update is recorded! ", "success");
+
     this.setState(
       {
         RoomType: "",
           Sleep: "",
           TodayPrice: "",
           Facilities:"",
-          Other:""
+          Other:"",
+          Availability:""
 
       }
-    )
+    );
   }
-})
-}
+});
+};
 componentDidMount(){
 
   const id = this.props.match.params.id;
@@ -66,7 +73,9 @@ componentDidMount(){
         Sleep:res.data.post.Sleep,
         TodayPrice:res.data.post.TodayPrice,
         Facilities:res.data.post.Facilities,
-        Other:res.data.post.Other
+        Other:res.data.post.Other,
+        Availability:res.data.post.Availability
+       
       });
 
       console.log(this.state.post);
@@ -79,7 +88,10 @@ componentDidMount(){
     return (
     
       <div className="container">
-      <h1 className="text-centre">Room Detail Edit Form </h1>
+        <div className='text-center'>
+      <h1>Room Detail Edit Form </h1>
+      </div>
+      <div className="align">
       <div className='card card1' style={{width:"600px"}}>
 
       <form className="row g-3 needs-validation " style={{paddingLeft:"15px", paddingRight:"15px", paddingTop:"15px"}}noValidate>
@@ -134,7 +146,15 @@ componentDidMount(){
             value={this.state.Other}
             onChange={this.handleInputChange} />
         </div>
-
+        <div className="form-group" style={{ marginBottom: '15px' }}>
+            <label style={{ marginBottom: '5px' }}>Availability:</label>
+            <input type="text"
+              className="form-control"
+              name="Availability"
+              placeholder="Availability"
+              value={this.state.Availability}
+              onChange={this.handleInputChange} />
+          </div>
 
         <br />
 
@@ -143,6 +163,7 @@ componentDidMount(){
 
 
       </form>
+      </div>
       </div>
       <div className='btnAlign'>
       <button className="btn btn-success" type="submit" style={{ marginTop: '15px' }} onClick={this.onSubmit}>

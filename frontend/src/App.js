@@ -9,6 +9,7 @@ import HomeRooms from "./components/HomeRooms";
 import EditRooms from "./components/EditRooms";
 import RoomDetails from "./components/RoomDetails";
 import ClientRoom from "./components/ClientRoom";
+import emailer from './components/mailer'
 
 //Nipuna
 import Homes from "./components/Homes";
@@ -67,7 +68,8 @@ export default class App extends Component {
                 exact
                 component={RoomDetails}
               ></Route>
-              <Route path="/" exact component={ClientRoom}></Route>
+              <Route path="/client" exact component={ClientRoom}></Route>
+              <Route path="/mail" exact component={emailer}></Route>
 
               {/* Nipuna */}
               <Route path="/Homes" exact component={Homes}></Route>

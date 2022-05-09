@@ -73,6 +73,7 @@ export default class ClientRoom extends Component {
                 <th scope="col">Today's Price</th>
                 <th scope="col">Facilities</th>
                 <th scope="col">Other</th>
+                <th scope="col">Availability</th>
              
                 
               </tr>
@@ -91,6 +92,7 @@ export default class ClientRoom extends Component {
                     <td>{posts.TodayPrice}</td>
                     <td>{posts.Facilities}</td>
                     <td>{posts.Other}</td>
+                    <td>{posts.Availability}</td>
     
                     
                   </tr>
@@ -98,7 +100,7 @@ export default class ClientRoom extends Component {
             </tbody>
             <br/>
     
-            <button className="btn btn-success"><a href="/rooms/add" style={{textDecoration:'none',color:'white'}}>Check Availability</a></button>
+            <button className="btn btn-success"><a href="" style={{textDecoration:'none',color:'white'}}>Check Availability</a></button>
           </table>
     
          
