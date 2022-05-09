@@ -184,8 +184,8 @@ function Card({title,imageUrl,body}) {
        </div>
       
        <div className="btn">
-           <button>
-               <a>
+           <button  >
+               <a   href="/">
                    View More
                </a>
            </button>

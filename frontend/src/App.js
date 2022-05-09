@@ -72,14 +72,7 @@ export default class App extends Component {
               <Route path="/mail" exact component={emailer}></Route>
 
               {/* Nipuna */}
-              <Route path="/Homes" exact component={Homes}></Route>
-              <div className="App">
-                <Card
-                  title="Card Title"
-                  imageUrl="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyimVbEex6oC94o7xwRyNAuV_V_BCz-6vsMVOLIUcD6gb6IdBJFR2LaC-au_XOOWeuH3U&usqp=CAU"
-                  body="dededwded"
-                />
-              </div>
+              <Route path="/" exact component={Homes}></Route>
               <div style={{ paddingTop: "100px", width: "100%" }}>
                 <Footer></Footer>
               </div>
