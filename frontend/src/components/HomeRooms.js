@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-
-
+import swal from "sweetalert";
 
 export default class HomeRooms extends Component {
   constructor(props){
@@ -26,7 +25,8 @@ export default class HomeRooms extends Component {
   }
   onDelete=(id)=>{
     axios.delete(`http://localhost:8000/rooms/delete/${id}`).then((res)=>{
-      alert("delete successfully");
+      // alert("delete successfully");
+      swal("Deleted Successful", "Room detail is removed", "success");
       this.retrievePosts();
     })
   }
@@ -54,7 +54,10 @@ export default class HomeRooms extends Component {
   render() {
     return (
       <div className="container">
-        <h> Hotel Rooms Details </h>
+        <br/>
+        <br/>
+        <div className='text-center'>
+        <h3> Hotel Rooms Details </h3></div>
         <div className="col-lg-3 mt-2 mb-2">
           <input
           className="form-control"
@@ -75,6 +78,7 @@ export default class HomeRooms extends Component {
             <th scope="col">Today's Price</th>
             <th scope="col">Facilities</th>
             <th scope="col">Other</th>
+            <th scope="col">Availability</th>
             <th scope="col">Action</th>
             
           </tr>
@@ -93,6 +97,7 @@ export default class HomeRooms extends Component {
                 <td>{posts.TodayPrice}</td>
                 <td>{posts.Facilities}</td>
                 <td>{posts.Other}</td>
+                <td>{posts.Availability}</td>
 
                 <td>
                   <a className="btn btn-warning" href={`rooms/edit/${posts._id}`}>
