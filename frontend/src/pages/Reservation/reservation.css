@@ -1,0 +1,14 @@
+.reservation-container .container-sm{
+    width: 500px;
+    border: 2px solid black;
+}
+
+.reservation-container .btn-primary{
+    display: inline-block;
+    width: 100px;
+    margin:5px;
+}
+.reservation-container .btn{
+    display: inline-block;
+    
+}
