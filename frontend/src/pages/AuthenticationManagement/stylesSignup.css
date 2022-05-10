@@ -1,5 +1,5 @@
 .form-common {
-    background: #bae2f0;
+    background: #bbbcbc;
     border-radius: 10px;
     margin: 5%;
     border-radius: 20px;
@@ -15,7 +15,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #fff;
 }
 
 .form-common .ant-input {
@@ -38,7 +37,7 @@
 
 .form-common .ant-btn {
     border-radius: 5px;
-    background: #1890ff;
+    background: #a59586;
     outline: none;
     border: none;
 }

@@ -3,7 +3,7 @@ import { Form, Input, Button, Checkbox, message } from "antd";
 import { UserOutlined, LockOutlined } from "@ant-design/icons";
 import "antd/dist/antd.css";
 import "./stylesSignin.css";
-import logo from "../../images/logo.png";
+import logo from "../../images/starr.png";
 import useRequest from "../../services/RequestContext";
 import useUser from "../../services/UserContext";
 import { useHistory } from "react-router-dom";
@@ -36,12 +36,13 @@ function Signin() {
 
   return (
     <>
+    <div className style={{ backgroundImage: 'url("https://image.freepik.com/free-photo/abstract-blur-luxury-hotel-lobby-background_1339-98449.jpg")', backgroundSize: 'cover'}}>
       <div className="main-container-signin">
         <div className="form-signin">
           <h1>Login</h1>
 
           <div className="form-container">
-            <img width={300} src={logo} alt="Logo" />
+            <img width={290} style={{marginLeft:"-60px"}} src={logo} alt="Logo" />
 
             <Form
               name="normal_login"
@@ -103,6 +104,7 @@ function Signin() {
           </div>
         </div>
       </div>
+    </div>
     </>
   );
 }
