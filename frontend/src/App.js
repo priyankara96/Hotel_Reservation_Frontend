@@ -17,11 +17,15 @@ import NavBar from "./components/NavBar";
 import Card from "./components/Card";
 import Footer from "./components/Footer";
 
-//login
+//Priyankara
 import SignupAdmin from "./pages/AuthenticationManagement/SignupAdmin";
 import SignupTraveller from "./pages/AuthenticationManagement/SignupTraveller";
 import Signin from "./pages/AuthenticationManagement/Signin";
 import HomeNew from "./pages/AuthenticationManagement/HomeNew";
+import AdminDashboard from "./pages/AuthenticationManagement/AdminDashboard";
+import Sidebar from "./components/Sidebar/Sidebar";
+import Profile from "./pages/AuthenticationManagement/TravellerProfile";
+import AdminProfile from "./pages/AuthenticationManagement/AdminProfile";
 
 //Erandi-Reservation
 import AddReservation from "./pages/Reservation/AddReservation";
@@ -36,16 +40,19 @@ export default class App extends Component {
           <BrowserRouter>
             <NavBar />
             <div style={{ backgroundColor: "#D0D3D4", margin: "0" }}>
-              {/* Login Routes*/}
+
+              {/* User management - Priyankara*/}
               <Route path="/SignupAdmin" exact component={SignupAdmin} />
-              <Route
-                path="/SignupTraveller"
-                exact
-                component={SignupTraveller}
-              />
+              <Route path="/SignupTraveller" exact component={SignupTraveller} />
               <Route path="/signin" exact component={Signin} />
               <Route path="/HomeNew" exact component={HomeNew} />
-              {/* End Login Routes */}
+              <Route path="/AdminDashboard" exact component={AdminDashboard} />
+              <Route path="/Sidebar" exact component={Sidebar} />
+              <Route path="/Profile" exact component={Profile} />
+              <Route path="/AdminProfile" exact component={AdminProfile} />
+              {/* End User management */}
+
+
 
               {/* Erandi- Reservation */}
               <Route path="/AddReservation" exact component={AddReservation} />

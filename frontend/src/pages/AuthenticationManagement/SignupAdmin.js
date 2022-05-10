@@ -2,6 +2,7 @@ import React from "react";
 import { Form, Input, Button, DatePicker, Radio } from "antd";
 import "./stylesSignup.css";
 import "antd/dist/antd.css";
+import swal from 'sweetalert';
 import useRequest from "../../services/RequestContext";
 import moment from "moment";
 
@@ -32,6 +33,10 @@ function SignupAdmin() {
     try {
       const result = await request.post("CommonSignup", values);
       console.log("api sign up admin result ", result);
+          swal({ text: "Successfully Created", icon: "success", button: "Okay!"})
+              .then((value) => {
+              window.location = '/signin';
+          });
     } catch (e) {
       console.log("post sign up admin error ", e);
     }
@@ -41,6 +46,7 @@ function SignupAdmin() {
 
   return (
     <>
+    <div className style={{ backgroundImage: 'url("https://i5.walmartimages.com/asr/bad42561-78b0-4554-9aeb-f7bb5ce08905_1.6f69634b642562a7fc785d666eeacb70.jpeg")', backgroundSize: 'cover'}}>
       <div className="main-container-signup">
         <div className="form-common">
           <h1>Sign Up</h1>
@@ -189,17 +195,18 @@ function SignupAdmin() {
               <Input.Password />
             </Form.Item>
             <hr></hr>
-            By signing up you agree to SkillLab's{" "}
+            By signing up you agree to Kings Hotel's{" "}
             <a href="/terms">Terms of Service and Privacy Policy</a>
             <hr></hr>
             <Form.Item wrapperCol={{ ...layout.wrapperCol, offset: 8 }}>
-              <Button type="primary" htmlType="submit">
+              <Button type="primary" htmlType="submit" >
                 Submit
               </Button>
             </Form.Item>
           </Form>
         </div>
       </div>
+    </div>
     </>
   );
 }

@@ -2,6 +2,7 @@ import React from "react";
 import { Form, Input, Button, DatePicker, Radio } from "antd";
 import "./stylesSignup.css";
 import "antd/dist/antd.css";
+import swal from 'sweetalert';
 import useRequest from "../../services/RequestContext";
 import moment from "moment";
 
@@ -33,6 +34,10 @@ function SignupTraveller() {
     try {
       const result = await request.post("CommonSignup", values);
       console.log("api call sign up traveller result ", result);
+          swal({ text: "Successfully Created", icon: "success", button: "Okay!"})
+              .then((value) => {
+              window.location = '/signin';
+          });
     } catch (e) {
       console.log("post sign up traveller error ", e);
     }
@@ -42,6 +47,7 @@ function SignupTraveller() {
 
   return (
     <>
+    <div className style={{ backgroundImage: 'url("https://images.squarespace-cdn.com/content/v1/554cf267e4b0ff0eff71b6e2/1458838704576-X5VQ3KONJS9VXA7YJLYF/Dollarphotoclub_42659877.jpg?format=1500w")', backgroundSize: 'cover'}}>
       <div className="main-container-signup">
         <div className="form-common">
           <h1>Sign Up</h1>
@@ -199,6 +205,7 @@ function SignupTraveller() {
           </Form>
         </div>
       </div>
+    </div>
     </>
   );
 }
