@@ -18,14 +18,15 @@ import Card from "./components/Card";
 import Footer from "./components/Footer";
 
 //Priyankara
-import SignupAdmin from "./pages/AuthenticationManagement/SignupAdmin";
-import SignupTraveller from "./pages/AuthenticationManagement/SignupTraveller";
-import Signin from "./pages/AuthenticationManagement/Signin";
+import SignupAdmin from "./pages/AuthenticationManagement/AdminSignup";
+import SignupTraveller from "./pages/AuthenticationManagement/TravellerSignup";
+import Signin from "./pages/AuthenticationManagement/TravellerSignin";
 import HomeNew from "./pages/AuthenticationManagement/HomeNew";
 import AdminDashboard from "./pages/AuthenticationManagement/AdminDashboard";
 import Sidebar from "./components/Sidebar/Sidebar";
 import Profile from "./pages/AuthenticationManagement/TravellerProfile";
 import AdminProfile from "./pages/AuthenticationManagement/AdminProfile";
+import AdminSignin from "./pages/AuthenticationManagement/AdminSignin";
 
 //Erandi-Reservation
 import AddReservation from "./pages/Reservation/AddReservation";
@@ -50,6 +51,7 @@ export default class App extends Component {
               <Route path="/Sidebar" exact component={Sidebar} />
               <Route path="/Profile" exact component={Profile} />
               <Route path="/AdminProfile" exact component={AdminProfile} />
+              <Route path="/admin" exact component={AdminSignin} />
               {/* End User management */}
 
 
