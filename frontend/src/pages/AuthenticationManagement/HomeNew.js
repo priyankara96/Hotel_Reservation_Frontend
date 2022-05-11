@@ -13,7 +13,7 @@ export default function HomeNew() {
     setUser({});
 
     history.push("/signin");
-  };
+  }; 
 
   return (
     <div>

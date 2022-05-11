@@ -98,7 +98,8 @@ function Stdprofile() {
   };
 
   const redirect = () => {
-    history.push('/home')
+    history.push('/');
+    window.location.reload(true);
   }
   const onDelete = async value => {
     try {
