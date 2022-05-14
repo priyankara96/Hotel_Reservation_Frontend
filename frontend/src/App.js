@@ -32,6 +32,7 @@ import AdminSignin from "./pages/AuthenticationManagement/AdminSignin";
 import AddReservation from "./pages/Reservation/AddReservation";
 import ViewReservation from "./pages/Reservation/ViewReservation";
 import UpdateReservation from "./pages/Reservation/UpdateReservation";
+import MapLocation from './pages/MapLocation';
 
 export default class App extends Component {
   render() {
@@ -68,6 +69,8 @@ export default class App extends Component {
                 exact
                 component={UpdateReservation}
               />
+              <Route path="/MapLocation" exact component={MapLocation} />
+              {/* End */}
 
               <Route path="/rooms/add" exact component={createrooms}></Route>
               <Route path="/rooms" exact component={HomeRooms}></Route>
