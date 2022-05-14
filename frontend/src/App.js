@@ -9,7 +9,7 @@ import HomeRooms from "./components/HomeRooms";
 import EditRooms from "./components/EditRooms";
 import RoomDetails from "./components/RoomDetails";
 import ClientRoom from "./components/ClientRoom";
-import emailer from './components/mailer'
+import emailer from "./components/mailer";
 
 //Nipuna
 import Homes from "./components/Homes";
@@ -28,11 +28,12 @@ import Profile from "./pages/AuthenticationManagement/TravellerProfile";
 import AdminProfile from "./pages/AuthenticationManagement/AdminProfile";
 import AdminSignin from "./pages/AuthenticationManagement/AdminSignin";
 
-//Erandi-Reservation
+//Erandi
 import AddReservation from "./pages/Reservation/AddReservation";
 import ViewReservation from "./pages/Reservation/ViewReservation";
 import UpdateReservation from "./pages/Reservation/UpdateReservation";
-import MapLocation from './pages/Map/MapLocation';
+import MapLocation from "./pages/Map/MapLocation";
+import PaymentGateway from "./pages/Payments/PaymentGateway";
 
 export default class App extends Component {
   render() {
@@ -42,10 +43,13 @@ export default class App extends Component {
           <BrowserRouter>
             <NavBar />
             <div style={{ backgroundColor: "#D0D3D4", margin: "0" }}>
-
               {/* User management - Priyankara*/}
               <Route path="/SignupAdmin" exact component={SignupAdmin} />
-              <Route path="/SignupTraveller" exact component={SignupTraveller} />
+              <Route
+                path="/SignupTraveller"
+                exact
+                component={SignupTraveller}
+              />
               <Route path="/signin" exact component={Signin} />
               <Route path="/HomeNew" exact component={HomeNew} />
               <Route path="/AdminDashboard" exact component={AdminDashboard} />
@@ -55,9 +59,7 @@ export default class App extends Component {
               <Route path="/admin" exact component={AdminSignin} />
               {/* End User management */}
 
-
-
-              {/* Erandi- Reservation */}
+              {/* Erandi */}
               <Route path="/AddReservation" exact component={AddReservation} />
               <Route
                 path="/ViewReservation"
@@ -70,7 +72,8 @@ export default class App extends Component {
                 component={UpdateReservation}
               />
               <Route path="/MapLocation" exact component={MapLocation} />
-              {/* End */}
+              <Route path="/PaymentGateway" exact component={PaymentGateway} />
+              {/* Erandi */}
 
               <Route path="/rooms/add" exact component={createrooms}></Route>
               <Route path="/rooms" exact component={HomeRooms}></Route>
