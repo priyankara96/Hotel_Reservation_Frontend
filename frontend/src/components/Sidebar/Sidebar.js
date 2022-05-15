@@ -6,6 +6,7 @@ import * as AiIcons from 'react-icons/ai';
 import { SidebarDataStock } from './SidebarData';
 import SubMenu from './SubMenu';
 import { IconContext } from 'react-icons/lib';
+import { AiOutlineHome } from "react-icons/ai";
 
 
 const Nav = styled.div`
@@ -55,6 +56,7 @@ const SidebarStock = () => {
                     <NavIcon to='#'>
                         <FaIcons.FaBars onClick={showSidebar} />
                     </NavIcon>
+                    <a href="/AdminDashboard" type="button" class="btn btn-outline-secondary" style={{marginLeft:"50px"}} > <AiOutlineHome /> </a>
                 </Nav>
               
                     <SidebarNav sidebar={sidebar}>
@@ -68,6 +70,7 @@ const SidebarStock = () => {
                             })}
                         </SidebarWrap>       
                     </div>
+
                     </SidebarNav>
          
 

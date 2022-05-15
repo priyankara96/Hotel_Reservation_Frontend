@@ -27,6 +27,11 @@ import Sidebar from "./components/Sidebar/Sidebar";
 import Profile from "./pages/AuthenticationManagement/TravellerProfile";
 import AdminProfile from "./pages/AuthenticationManagement/AdminProfile";
 import AdminSignin from "./pages/AuthenticationManagement/AdminSignin";
+import UserManagement from "./pages/AuthenticationManagement/UserManagement";
+import All_Edit_Data from "./pages/AuthenticationManagement/All_Edit_Data";
+import All_Data from "./pages/AuthenticationManagement/All_Data";
+import Add_Traveller from "./pages/AuthenticationManagement/Add_Traveller";
+import Add_User from "./pages/AuthenticationManagement/Add_User";
 
 //Erandi-Reservation
 import AddReservation from "./pages/Reservation/AddReservation";
@@ -52,6 +57,11 @@ export default class App extends Component {
               <Route path="/Profile" exact component={Profile} />
               <Route path="/AdminProfile" exact component={AdminProfile} />
               <Route path="/admin" exact component={AdminSignin} />
+              <Route path="/UserManagement" exact component={UserManagement} />
+              <Route path = "/alledit/:id" exact component={All_Edit_Data} />
+              <Route path="/All_Data" exact component={All_Data} />
+              <Route path="/Add_Traveller" exact component={Add_Traveller} />
+              <Route path="/Add_User" exact component={Add_User} />
               {/* End User management */}
 
 

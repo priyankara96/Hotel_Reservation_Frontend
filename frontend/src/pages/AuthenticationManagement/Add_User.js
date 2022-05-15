@@ -5,8 +5,9 @@ import "antd/dist/antd.css";
 import swal from 'sweetalert';
 import useRequest from "../../services/RequestContext";
 import moment from "moment";
+import Sidebar from '../../components/Sidebar/Sidebar';
 
-function SignupAdmin() {
+function Add_User() {
   const layout = {
     labelCol: {
       span: 8,
@@ -35,7 +36,7 @@ function SignupAdmin() {
       console.log("api sign up admin result ", result);
           swal({ text: "Successfully Created", icon: "success", button: "Okay!"})
               .then((value) => {
-              window.location = '/admin';
+              window.location = '/All_Data';
           });
     } catch (e) {
       console.log("post sign up admin error ", e);
@@ -46,11 +47,11 @@ function SignupAdmin() {
 
   return (
     <>
+    <Sidebar />
     <div className style={{ backgroundImage: 'url("https://i5.walmartimages.com/asr/bad42561-78b0-4554-9aeb-f7bb5ce08905_1.6f69634b642562a7fc785d666eeacb70.jpeg")', backgroundSize: 'cover'}}>
       <div className="main-container-signup">
         <div className="form-common">
-          <h1>Sign Up</h1>
-          <h2>As Admin</h2>
+          <h1>Add User</h1>
 
           <br></br>
 
@@ -211,4 +212,4 @@ function SignupAdmin() {
   );
 }
 
-export default SignupAdmin;
+export default Add_User;

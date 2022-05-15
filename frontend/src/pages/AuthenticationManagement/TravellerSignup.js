@@ -193,10 +193,10 @@ function SignupTraveller() {
             </Form.Item>
             <hr></hr>
             By signing up you agree to Star Hotel's{" "}
-            <a href="/terms">Terms of Service and Privacy Policy</a>
+            <a href="#">Terms of Service and Privacy Policy</a>
             <hr></hr>
             <Form.Item wrapperCol={{ ...layout.wrapperCol, offset: 8 }}>
-              {/* <Link to ="/home2" > */}
+              {/* <Link to ="/signin" > */}
               <Button type="primary" htmlType="submit">
                 Submit
               </Button>

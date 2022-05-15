@@ -89,7 +89,7 @@ function Signin() {
                   <Checkbox>Remember me |</Checkbox>
                 </Form.Item>
 
-                <a href="/Signup">Sign up</a>
+                <a href="/SignupTraveller">Sign up</a>
               </Form.Item>
 
               <Form.Item>

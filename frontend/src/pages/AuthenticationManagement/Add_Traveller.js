@@ -5,8 +5,9 @@ import "antd/dist/antd.css";
 import swal from 'sweetalert';
 import useRequest from "../../services/RequestContext";
 import moment from "moment";
+import Sidebar from '../../components/Sidebar/Sidebar';
 
-function SignupAdmin() {
+function Add_Travelle() {
   const layout = {
     labelCol: {
       span: 8,
@@ -27,18 +28,19 @@ function SignupAdmin() {
   const { request } = useRequest();
 
   const onFinish = async (values) => {
-    values.role = "Admin";
+    values.role = "Traveller";
     values.birthday = moment(values.birthday).format("YYYY-MM-DD");
+
     console.log("value", values);
     try {
       const result = await request.post("CommonSignup", values);
-      console.log("api sign up admin result ", result);
+      console.log("api call sign up traveller result ", result);
           swal({ text: "Successfully Created", icon: "success", button: "Okay!"})
               .then((value) => {
-              window.location = '/admin';
+              window.location = '/All_Data';
           });
     } catch (e) {
-      console.log("post sign up admin error ", e);
+      console.log("post sign up traveller error ", e);
     }
   };
 
@@ -46,17 +48,15 @@ function SignupAdmin() {
 
   return (
     <>
+    <Sidebar />
     <div className style={{ backgroundImage: 'url("https://i5.walmartimages.com/asr/bad42561-78b0-4554-9aeb-f7bb5ce08905_1.6f69634b642562a7fc785d666eeacb70.jpeg")', backgroundSize: 'cover'}}>
       <div className="main-container-signup">
         <div className="form-common">
-          <h1>Sign Up</h1>
-          <h2>As Admin</h2>
-
-          <br></br>
+          <h1>Add Traveller</h1>
 
           <Form
             layout="vertical"
-            name="signupAdmin"
+            name="signupTraveller"
             onFinish={onFinish}
             validateMessages={validateMessages}
           >
@@ -176,13 +176,11 @@ function SignupAdmin() {
                   required: true,
                   message: "Please confirm your password!",
                 },
-
                 ({ getFieldValue }) => ({
                   validator(_, value) {
                     if (!value || getFieldValue("inputpw") === value) {
                       return Promise.resolve();
                     }
-
                     return Promise.reject(
                       new Error(
                         "The two passwords that you entered do not match!"
@@ -195,13 +193,15 @@ function SignupAdmin() {
               <Input.Password />
             </Form.Item>
             <hr></hr>
-            By signing up you agree to Kings Hotel's{" "}
+            By signing up you agree to Star Hotel's{" "}
             <a href="#">Terms of Service and Privacy Policy</a>
             <hr></hr>
             <Form.Item wrapperCol={{ ...layout.wrapperCol, offset: 8 }}>
-              <Button type="primary" htmlType="submit" >
+              {/* <Link to ="/signin" > */}
+              <Button type="primary" htmlType="submit">
                 Submit
               </Button>
+              {/* </Link> */}
             </Form.Item>
           </Form>
         </div>
@@ -211,4 +211,4 @@ function SignupAdmin() {
   );
 }
 
-export default SignupAdmin;
+export default Add_Travelle;

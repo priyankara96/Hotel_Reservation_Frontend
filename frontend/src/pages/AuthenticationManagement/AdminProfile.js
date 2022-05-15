@@ -98,7 +98,7 @@ function Stdprofile() {
   };
 
   const redirect = () => {
-    history.push('/');
+    history.push('/AdminProfile');
     window.location.reload(true);
   }
   const onDelete = async value => {
