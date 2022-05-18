@@ -9,13 +9,15 @@ class NavBar extends Component{
         <a className="navbar-brand" href="/"><h3>The Star Hotel </h3>&nbsp;
         <img src={starr} class="rounded-circle" alt="Cinque Terre" style={{width:'120px'}}></img></a>
         <a href="/"><i class='far fa-address-card' style={{fontSize:'30px',marginLeft:'1000px'}}></i></a>
+       
+        <img src={starr} class="rounded-circle" alt="Cinque Terre" style={{width:'120px'}}></img> <a className="navbar-brand" href="/"><h2 style={{marginRight:'1000px', marginTop:'25px'}}>The Star Hotel </h2> &nbsp;</a>
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"></span>
         </button>
         <div className="collapse navbar-collapse" id="navbarNavDropdown">
           <ul className="navbar-nav">
             <li className="nav-item">
-            <a className="nav-link" aria-current="page" href="/">About Us</a>
+            <a className="nav-link" aria-current="page" href="/aboutus">About Us</a>
               <a className="nav-link" aria-current="page" href="/">Help</a>
                 <a className="nav-link" aria-current="page" href="/">Contact Us</a>
 

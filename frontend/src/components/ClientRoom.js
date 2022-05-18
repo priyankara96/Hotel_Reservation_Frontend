@@ -134,8 +134,15 @@ export default class ClientRoom extends Component {
             </tbody>
             <br/>
 
+
+ <button className="btn btn-success"><a href="/Availability" style={{textDecoration:'none',color:'white'}}>Reserve Now</a></button>
+
+
          
           </table>
+          <div className='center'>
+          <button className="btn btn-success "><a href='' style={{color:'white'}}>Check Availability</a></button>
+          </div>
           </div>
           
           </div>
