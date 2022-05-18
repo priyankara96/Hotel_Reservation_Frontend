@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import useRequest from "../../services/RequestContext";
 import "./reservation.css";
+import { useHistory } from "react-router-dom";
+import reserveImage from "../../images/reserve.jpg";
 
 export default function AddReservation() {
   const [data, setData] = useState({
@@ -11,6 +13,8 @@ export default function AddReservation() {
     noOfKids: "",
     noOfAdults: "",
   });
+
+  const history = useHistory();
 
   const HandleOnChange = (e) => {
     e.persist();
@@ -35,22 +39,37 @@ export default function AddReservation() {
   const { request } = useRequest();
 
   const onFinish = async (values) => {
-    console.log("value", values);
     try {
       const result = await request.post("reservations", data);
-      console.log("api call reservation result ", result);
+      alert("Successfully Reserved !");
+      if (
+        data.roomType === "Signature King Room" ||
+        data.roomType === "Deluxe King Room" ||
+        data.roomType === "Premier King Room"
+      ) {
+        history.push(`/PaymentGateway/${data.roomType}`);
+       //redirect();
+        window.location.reload(true);
+      } else {
+        history.push("/");
+        window.location.reload(true);
+      }
     } catch (e) {
-      console.log("post reservation error ", e);
+      alert("Error in Reservation !");
     }
-    onReset();
+  };
+
+  const redirect = () => {
+    history.push(`/PaymentGateway/${data.roomType}`);
   };
 
   return (
     <div className="reservation-container">
+      <img src={reserveImage} className="reserveimg" />
       <div className="container-sm">
         <form>
           <center>
-            <h1>Add Reservation</h1>
+            <h3>Add Reservation</h3>
             <br />
             <label>Room Type</label>
             <select
@@ -61,11 +80,12 @@ export default function AddReservation() {
               onChange={(e) => HandleOnChange(e)}
             >
               <option selected>Select Room Type</option>
-              <option value="Deluxe">Deluxe</option>
-              <option value="Standard">Standard</option>
-              <option value="Twin">Twin</option>
+              <option value="Deluxe King Room">Deluxe King Room</option>
+              <option value="Deluxe Twin Room">Deluxe Twin Room</option>
+              <option value="Premier King Room">Premier King Room</option>
+              <option value="Premier Twin Room">Premier Twin Room</option>
+              <option value="Signature King Room">Signature King Room</option>
             </select>
-            <br />
             <br />
 
             <label>CheckIn Date</label>
@@ -78,7 +98,6 @@ export default function AddReservation() {
               onChange={(e) => HandleOnChange(e)}
             />
             <br />
-            <br />
 
             <label>CheckOut Date</label>
             <input
@@ -89,7 +108,6 @@ export default function AddReservation() {
               value={data.checkOut}
               onChange={(e) => HandleOnChange(e)}
             />
-            <br />
             <br />
 
             <label>Number Of Rooms</label>
@@ -102,7 +120,6 @@ export default function AddReservation() {
               onChange={(e) => HandleOnChange(e)}
             />
             <br />
-            <br />
 
             <label>Number Of Kids</label>
             <input
@@ -114,7 +131,6 @@ export default function AddReservation() {
               onChange={(e) => HandleOnChange(e)}
             />
             <br />
-            <br />
 
             <label>Number Of Kids</label>
             <input
@@ -125,7 +141,6 @@ export default function AddReservation() {
               value={data.noOfAdults}
               onChange={(e) => HandleOnChange(e)}
             />
-            <br />
             <br />
 
             <button
@@ -145,6 +160,29 @@ export default function AddReservation() {
           </center>
         </form>
       </div>
+      <br />
+      <br />
+      <br /> <br />
+      <br />
+      <br /> <br />
+      <br />
+      <br /> <br />
+      <br />
+      <br /> <br />
+      <br />
+      <br /> <br />
+      <br />
+      <br /> <br />
+      <br />
+      <br /> <br />
+      <br />
+      <br /> <br />
+      <br />
+      <br /> <br />
+      <br />
+      <br /> <br />
+      <br />
+      <br />
     </div>
   );
 }

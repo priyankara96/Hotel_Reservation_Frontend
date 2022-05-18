@@ -4,7 +4,7 @@ import "./Map.css";
 
 export default function MapLocation() {
   const { isLoaded } = useLoadScript({
-    googleMapsApiKey: "AIzaSyBpR5SKJghIg9gsDAg95KueybZkEfx6HMw",
+    googleMapsApiKey: "AIzaSyDwuMcYFcvOtLU8MxBLdBYvxVdhKBZzS3I",
   });
 
   const center = useMemo(() => ({ lat: 6.93197, lng: 79.85775 }), []);
