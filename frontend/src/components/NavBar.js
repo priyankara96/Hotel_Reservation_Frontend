@@ -8,6 +8,7 @@ class NavBar extends Component{
       <div className="container-fluid">
         <a className="navbar-brand" href="/"><h3>The Star Hotel </h3>&nbsp;
         <img src={starr} class="rounded-circle" alt="Cinque Terre" style={{width:'120px'}}></img></a>
+        <a href="/"><i class='far fa-address-card' style={{fontSize:'30px',marginLeft:'1000px'}}></i></a>
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"></span>
         </button>
