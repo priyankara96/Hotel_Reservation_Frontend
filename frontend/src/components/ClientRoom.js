@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import "./styles1.css";
+import { padding } from '@mui/system';
 
 export default class ClientRoom extends Component {
     constructor(props){
@@ -51,17 +53,45 @@ export default class ClientRoom extends Component {
     
       render() {
         return (
-          <div className="container">
-            <h> Hotel Rooms Details </h>
+          <div style={{width: "100%", height: "100%"}}>
+            <div className='text-center'>
+            <h2> Hotel Rooms Details </h2>
+            
+            </div>
+            <div className='row'>
+              <div className='col-7'>
+                <img className='img1' src='https://assets.vogue.com/photos/61c0a52bd7570f67d6d9c0ba/master/w_2560%2Cc_limit/00-story.gif'/>
+              </div>
+              <div className='col-5'>
+                <div className='box'>
+                  <h3>Most Popular facilities</h3>
+                  <i class="material-icons">ac_unit</i> &nbsp; Air condition  &nbsp;
+                  <i class="material-icons">beach_access</i>  &nbsp; Sea View <br/>
+                  <i class="material-icons">edit_location</i>  &nbsp; Ideal Location &nbsp;
+                  <i class="material-icons">network_wifi</i>  &nbsp; Free Wifi
+                  <br/>
+                  <i class="material-icons">free_breakfast</i>  &nbsp; Fabulous Breakfast  &nbsp;
+                  <i class="material-icons">group</i> &nbsp; Luxury Rooms <br/>
+                  <i class="material-icons">hotel</i>  &nbsp; 5 Star Hotel  &nbsp;
+                  <i class="material-icons">local_dining</i>  &nbsp; Tasty Foods <br/>
+
+                  <br/>
+                  <br/>
+                  <h3>Extra Health and Safety</h3>
+                  <p>This property has taken extra health and hygine measures to ensure your safelty</p>
+                  <h3>Why the Star hotel</h3>
+                  Manage your bookings online <br/>
+                  Prices you can't beat!<br/>
+                  Great location and facilities for couples <br/>
+                  Booking is safe
+                </div>
+              
+              </div>
+            </div>
+            <br/>
+            <br/>
             <div className="col-lg-3 mt-2 mb-2">
-              <input
-              className="form-control"
-              type="search"
-              placeholder="search"
-              name="searchQuery"
-              onChange={this.handleSearchArea}>
-    
-              </input>
+             
     
             </div>
           <table class="table">
@@ -99,11 +129,12 @@ export default class ClientRoom extends Component {
                 )) }
             </tbody>
             <br/>
-    
-            <button className="btn btn-success"><a href="" style={{textDecoration:'none',color:'white'}}>Check Availability</a></button>
-          </table>
-    
+
+ <button className="btn btn-success"><a href="" style={{textDecoration:'none',color:'white'}}>Reserve Now</a></button>
+
          
+          </table>
+          
           </div>
           
         )

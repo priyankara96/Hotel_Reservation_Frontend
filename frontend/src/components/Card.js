@@ -15,7 +15,7 @@ function Card({title,imageUrl,body}) {
       </div>
        <div className="card-content">
             <div className="card-title">
-         <h3>{title}</h3>
+         <h3>DELUX KINGS'  ROOM</h3>
       </div>
        <div className="card-body">
        <p>{body}</p>
@@ -24,7 +24,7 @@ function Card({title,imageUrl,body}) {
       
        <div className="btn">
            <button>
-               <a>
+               <a href="/client"style={{ textDecoration: 'none', color: 'white' }}>
                    View More
                </a>
            </button>
@@ -37,7 +37,7 @@ function Card({title,imageUrl,body}) {
       </div>
        <div className="card-content">
             <div className="card-title">
-         <h3>{title}</h3>
+         <h3>DELUX TWINS  ROOM</h3>
       </div>
        <div className="card-body">
        <p>{body}</p>
@@ -46,7 +46,7 @@ function Card({title,imageUrl,body}) {
       
        <div className="btn">
            <button>
-               <a>
+               <a href="/client" style={{ textDecoration: 'none', color: 'white' }}>
                    View More
                </a>
            </button>
@@ -61,7 +61,7 @@ function Card({title,imageUrl,body}) {
       </div>
        <div className="card-content">
             <div className="card-title">
-         <h3>{title}</h3>
+         <h3>PREMIER KING ROOM</h3>
       </div>
        <div className="card-body">
        <p>{body}</p>
@@ -70,7 +70,7 @@ function Card({title,imageUrl,body}) {
       
        <div className="btn">
            <button>
-               <a>
+               <a href="/client" style={{ textDecoration: 'none', color: 'white' }}>
                    View More
                </a>
            </button>
@@ -83,7 +83,7 @@ function Card({title,imageUrl,body}) {
       </div>
        <div className="card-content">
             <div className="card-title">
-         <h3>{title}</h3>
+         <h3>PREMIUM TWIN ROOM</h3>
       </div>
        <div className="card-body">
        <p>{body}</p>
@@ -92,7 +92,7 @@ function Card({title,imageUrl,body}) {
       
        <div className="btn">
            <button>
-               <a>
+               <a href="/client" style={{ textDecoration: 'none', color: 'white' }}>
                    View More
                </a>
            </button>
@@ -109,7 +109,7 @@ function Card({title,imageUrl,body}) {
       </div>
        <div className="card-content">
             <div className="card-title">
-         <h3>{title}</h3>
+         <h3>SIGNATURE KING ROOM</h3>
       </div>
        <div className="card-body">
        <p>{body}</p>
@@ -118,7 +118,7 @@ function Card({title,imageUrl,body}) {
       
        <div className="btn">
            <button>
-               <a>
+               <a href="/client" style={{ textDecoration: 'none', color: 'white' }}>
                    View More
                </a>
            </button>
@@ -131,7 +131,7 @@ function Card({title,imageUrl,body}) {
       </div>
        <div className="card-content">
             <div className="card-title">
-         <h3>{title}</h3>
+         <h3>PREMIUM TWIN ROOM</h3>
       </div>
        <div className="card-body">
        <p>{body}</p>
@@ -140,7 +140,7 @@ function Card({title,imageUrl,body}) {
       
        <div className="btn">
            <button>
-               <a>
+               <a href="/client" style={{ textDecoration: 'none', color: 'white' }}>
                    View More
                </a>
            </button>
@@ -154,7 +154,7 @@ function Card({title,imageUrl,body}) {
       </div>
        <div className="card-content">
             <div className="card-title">
-         <h3>{title}</h3>
+         <h3>PREMIUM SINGLE ROOM</h3>
       </div>
        <div className="card-body">
        <p>{body}</p>
@@ -163,7 +163,7 @@ function Card({title,imageUrl,body}) {
       
        <div className="btn">
            <button>
-               <a>
+               <a href="/client" style={{ textDecoration: 'none', color: 'white' }}>
                    View More
                </a>
            </button>
@@ -176,7 +176,7 @@ function Card({title,imageUrl,body}) {
       </div>
        <div className="card-content">
             <div className="card-title">
-         <h3>{title}</h3>
+         <h3>SIGNATURE KING ROOM 2</h3>
       </div>
        <div className="card-body">
        <p>{body}</p>
@@ -185,7 +185,7 @@ function Card({title,imageUrl,body}) {
       
        <div className="btn">
            <button  >
-               <a   href="/">
+               <a   href="/client" style={{ textDecoration: 'none', color: 'white' }}>
                    View More
                </a>
            </button>

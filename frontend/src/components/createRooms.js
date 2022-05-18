@@ -41,7 +41,9 @@ export default class createrooms extends Component {
     };
     console.log(data);
 
-
+    if (RoomType == "" || Sleep == "" || TodayPrice == "" || Facilities == "" || Other == "" || Availability == "") {
+      swal("Please fill the form correctly", "Form values cannot be empty", "error");
+    }else{
 
     axios.post("http://localhost:8000/rooms/save", data).then((res) => {
       if (res.data.success) {
@@ -60,6 +62,7 @@ export default class createrooms extends Component {
         );
       }
     });
+  }
   };
 
   render() {
@@ -69,6 +72,11 @@ export default class createrooms extends Component {
           <div className="text-center">
             <h2>Room Detail Form </h2>
           </div>
+          <button  className="btn btn-success btnback">
+          <i class="material-icons">navigate_before</i>
+          <a href="/rooms"style={{ textDecoration: 'none', color: 'white' }}>
+              Back
+              </a></button>
           <div className="align">
 
           <div className="card1 card" style={{ width: "600px" }}>

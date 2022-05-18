@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import swal from "sweetalert";
+import "./styles1.css";
 
 export default class HomeRooms extends Component {
   constructor(props){
@@ -58,6 +59,11 @@ export default class HomeRooms extends Component {
         <br/>
         <div className='text-center'>
         <h3> Hotel Rooms Details </h3></div>
+        <button  className="btn btn-success btnback">
+          <i class="material-icons">navigate_before</i>
+          <a href="/rooms"style={{ textDecoration: 'none', color: 'white' }}>
+              Back
+              </a></button>
         <div className="col-lg-3 mt-2 mb-2">
           <input
           className="form-control"

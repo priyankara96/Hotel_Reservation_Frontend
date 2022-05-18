@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import "./styles1.css";
 
 export default class RoomDetails extends Component {
   constructor(props){
@@ -25,8 +26,16 @@ export default class RoomDetails extends Component {
       const {RoomType,Sleep,TodayPrice,Facilities,Other, Availability} = this.state.post;
       return(
         <div className='text-center'>
+             <button  className="btn btn-success btnback2">
+          <i class="material-icons">navigate_before</i>
+          <a href="/rooms"style={{ textDecoration: 'none', color: 'white' }}>
+              Back
+              </a></button>
           <h1>{RoomType}</h1>
+       
+          
           <hr/>
+         
           <dl className="row">
             <dt className="col-sm-3">Sleep</dt>
             <dd className="col-sm-9">{Sleep}</dd>
@@ -40,7 +49,7 @@ export default class RoomDetails extends Component {
             <dd className="col-sm-9">{Availability}</dd>
             
           </dl>
-        
+          <img src='https://www.freeiconspng.com/thumbs/hotel-png/hotel-png-4.png'/>
         </div>
     )
   }
