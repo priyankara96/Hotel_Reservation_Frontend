@@ -97,6 +97,7 @@ export default class ClientRoom extends Component {
              
     
             </div>
+            <div className='container'>
           <table class="table">
             <thead>
               <tr>
@@ -135,6 +136,7 @@ export default class ClientRoom extends Component {
 
          
           </table>
+          </div>
           
           </div>
           
