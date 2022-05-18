@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import axios from 'axios';
 import swal from "sweetalert";
+import "./styles1.css";
 
 export default class EditRooms extends Component {
 
@@ -91,6 +92,11 @@ componentDidMount(){
         <div className='text-center'>
       <h1>Room Detail Edit Form </h1>
       </div>
+      <button  className="btn btn-success btnback">
+          <i class="material-icons">navigate_before</i>
+          <a href="/rooms"style={{ textDecoration: 'none', color: 'white' }}>
+              Back
+              </a></button>
       <div className="align">
       <div className='card card1' style={{width:"600px"}}>
 

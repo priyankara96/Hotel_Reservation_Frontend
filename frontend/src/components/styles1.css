@@ -1,6 +1,5 @@
 .card1{
-    margin-top: 10px;
-    margin-bottom: 20px;
+   
     border-radius: 3px;
     box-shadow: 100px;
     border-width: 5px;
@@ -13,3 +12,41 @@
 .align{
     padding-left: 400px;
 }
+.img1{
+   
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    border-radius: 20px;    
+}
+.box{
+    background-color: lightgrey;
+    width: 70%;
+    border: 10px solid black;
+    padding: 50px;
+    margin: 20px;
+  }
+  .btnback{
+    line-height: 20px;
+ margin-top: 10px;
+    font-size: 12pt;
+    font-family: tahoma;
+    margin-top: 1px;
+    margin-right: 2px;
+    position:absolute;
+    top:0;
+    right:0;
+  }
+  .btnback2{
+    line-height: 20px;
+ margin-top: 100px;
+    font-size: 12pt;
+    font-family: tahoma;
+    margin-top: 1px;
+    margin-right: 2px;
+    position:absolute;
+    top:2;
+    right:0;
+  }
+

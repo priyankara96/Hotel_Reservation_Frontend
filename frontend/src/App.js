@@ -85,6 +85,7 @@ export default class App extends Component {
               <Route path="/PaymentGateway" exact component={PaymentGateway} />
               {/* Erandi */}
 
+                {/* Chanduni */}
               <Route path="/rooms/add" exact component={createrooms}></Route>
               <Route path="/rooms" exact component={HomeRooms}></Route>
               <Route path="/rooms/edit/:id" exact component={EditRooms}></Route>
@@ -95,6 +96,7 @@ export default class App extends Component {
               ></Route>
               <Route path="/client" exact component={ClientRoom}></Route>
               <Route path="/mail" exact component={emailer}></Route>
+              {/* Chanduni */}
 
               {/* Nipuna */}
               <Route path="/" exact component={Homes}></Route>
