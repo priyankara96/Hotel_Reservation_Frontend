@@ -54,13 +54,16 @@ export default class ClientRoom extends Component {
       render() {
         return (
           <div style={{width: "100%", height: "100%"}}>
-            <div className='text-center'>
+            <div className='text-center header'>
             <h2> Hotel Rooms Details </h2>
             
             </div>
             <div className='row'>
               <div className='col-7'>
+                <br/>
+                <div className='container'>
                 <img className='img1' src='https://assets.vogue.com/photos/61c0a52bd7570f67d6d9c0ba/master/w_2560%2Cc_limit/00-story.gif'/>
+                </div>
               </div>
               <div className='col-5'>
                 <div className='box'>
@@ -76,7 +79,7 @@ export default class ClientRoom extends Component {
                   <i class="material-icons">local_dining</i>  &nbsp; Tasty Foods <br/>
 
                   <br/>
-                  <br/>
+                 
                   <h3>Extra Health and Safety</h3>
                   <p>This property has taken extra health and hygine measures to ensure your safelty</p>
                   <h3>Why the Star hotel</h3>
@@ -89,11 +92,12 @@ export default class ClientRoom extends Component {
               </div>
             </div>
             <br/>
-            <br/>
+        
             <div className="col-lg-3 mt-2 mb-2">
              
     
             </div>
+            <div className='container'>
           <table class="table">
             <thead>
               <tr>
@@ -130,10 +134,13 @@ export default class ClientRoom extends Component {
             </tbody>
             <br/>
 
+
  <button className="btn btn-success"><a href="/Availability" style={{textDecoration:'none',color:'white'}}>Reserve Now</a></button>
+
 
          
           </table>
+          </div>
           
           </div>
           

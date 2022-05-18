@@ -1,16 +1,18 @@
 .card1{
-   
     border-radius: 3px;
-    box-shadow: 100px;
     border-width: 5px;
     border-color: black;
     padding: 20px;
 }
 .btnAlign{
-    padding-left: 650px;
+    display: flex;  
+justify-content: center;  
+align-items: center;  
 }
 .align{
-    padding-left: 400px;
+    display: flex;  
+justify-content: center;  
+align-items: center;  
 }
 .img1{
    
@@ -22,7 +24,7 @@
 }
 .box{
     background-color: lightgrey;
-    width: 70%;
+    width: 80%;
     border: 10px solid black;
     padding: 50px;
     margin: 20px;
@@ -46,7 +48,11 @@
     margin-top: 1px;
     margin-right: 2px;
     position:absolute;
-    top:2;
+    top:3;
     right:0;
+  }
+  .header{
+    color: white;
+    text-shadow: 4px 4px 6px #000000;
   }
 
