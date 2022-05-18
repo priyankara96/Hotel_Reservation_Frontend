@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import "./aboutus.css";
 import "./styles1.css";
+import chef from '../images/chef.png';
+import hr from '../images/hr.png';
+import md from '../images/md.png'
 
 export default class Aboutus extends Component {
   render() {
@@ -21,12 +24,12 @@ Whether it is for business or pleasure, make your visit truly exceptional and me
 <div class="row">
   <div class="col-4">
     <div class="card">
-    <img src="https://thetoptenchefs.com/wp/wp-content/uploads/2016/03/Vikas-Khanna-225x300.jpg" alt="John" style={{width:"100%"}}/>
+    <img src={md} alt="John" style={{width:'50%'}}/>
       <div class="container">
         <h2>Jane Doe</h2>
         <p class="title">CEO  Founder</p>
-        <p>.</p>
-        <p>jane@example.com</p>
+        <p></p>
+        <p>jane@starhotel.com</p>
         <p><button class="button">Contact</button></p>
       </div>
     </div>
@@ -34,12 +37,12 @@ Whether it is for business or pleasure, make your visit truly exceptional and me
 
   <div class="col-4">
     <div class="card">
-   
+    <img src={hr} alt="John" style={{width:'50%'}}/>
       <div class="container">
         <h2>Mike Ross</h2>
-        <p class="title">Art Director</p>
-        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-        <p>mike@example.com</p>
+        <p class="title">HR Management</p>
+        <p></p>
+        <p>mike@starhotel.com</p>
         <p><button class="button">Contact</button></p>
       </div>
     </div>
@@ -47,12 +50,12 @@ Whether it is for business or pleasure, make your visit truly exceptional and me
   
   <div class="col-4">
     <div class="card">
-     
+    <img src={chef} alt="John" style={{width:'50%'}}/>
       <div class="container">
         <h2>John Doe</h2>
-        <p class="title">Designer</p>
-        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-        <p>john@example.com</p>
+        <p class="title">Kitchen Management</p>
+        <p></p>
+        <p>john@starhotel.com</p>
         <p><button class="button">Contact</button></p>
       </div>
     </div>
