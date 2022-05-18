@@ -28,10 +28,10 @@ export default class RoomDetails extends Component {
         <div className='text-center'>
              <button  className="btn btn-success btnback2">
           <i class="material-icons">navigate_before</i>
-          <a href="/rooms"style={{ textDecoration: 'none', color: 'white' }}>
+          <a href="/client"style={{ textDecoration: 'none', color: 'white' }}>
               Back
               </a></button>
-          <h1>{RoomType}</h1>
+          <h1 >{RoomType}</h1>
        
           
           <hr/>
