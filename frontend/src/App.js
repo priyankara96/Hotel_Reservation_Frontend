@@ -39,6 +39,7 @@ import ViewReservation from "./pages/Reservation/ViewReservation";
 import UpdateReservation from "./pages/Reservation/UpdateReservation";
 import MapLocation from "./pages/Map/MapLocation";
 import PaymentGateway from "./pages/Payments/PaymentGateway";
+import Availability from "./pages/Reservation/Availability";
 
 export default class App extends Component {
   render() {
@@ -63,7 +64,7 @@ export default class App extends Component {
               <Route path="/AdminProfile" exact component={AdminProfile} />
               <Route path="/admin" exact component={AdminSignin} />
               <Route path="/UserManagement" exact component={UserManagement} />
-              <Route path = "/alledit/:id" exact component={All_Edit_Data} />
+              <Route path="/alledit/:id" exact component={All_Edit_Data} />
               <Route path="/All_Data" exact component={All_Data} />
               <Route path="/Add_Traveller" exact component={Add_Traveller} />
               <Route path="/Add_User" exact component={Add_User} />
@@ -82,10 +83,15 @@ export default class App extends Component {
                 component={UpdateReservation}
               />
               <Route path="/MapLocation" exact component={MapLocation} />
-              <Route path="/PaymentGateway" exact component={PaymentGateway} />
+              <Route
+                path="/PaymentGateway/:id"
+                exact
+                component={PaymentGateway}
+              />
+              <Route path="/Availability" exact component={Availability} />
               {/* Erandi */}
 
-                {/* Chanduni */}
+              {/* Chanduni */}
               <Route path="/rooms/add" exact component={createrooms}></Route>
               <Route path="/rooms" exact component={HomeRooms}></Route>
               <Route path="/rooms/edit/:id" exact component={EditRooms}></Route>
