@@ -61,7 +61,7 @@ export default class HomeRooms extends Component {
         <h3> Hotel Rooms Details </h3></div>
         <button  className="btn btn-success btnback">
           <i class="material-icons">navigate_before</i>
-          <a href="/rooms"style={{ textDecoration: 'none', color: 'white' }}>
+          <a href="/AdminDashboard"style={{ textDecoration: 'none', color: 'white' }}>
               Back
               </a></button>
         <div className="col-lg-3 mt-2 mb-2">
