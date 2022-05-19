@@ -203,6 +203,8 @@ function Add_User() {
               <Button type="primary" htmlType="submit" >
                 Submit
               </Button>
+              &nbsp;
+              <Button href="/UserManagement" type="button" class="btn btn-outline-secondary" style={{marginLeft:"0px"}} > Cancel </Button>
             </Form.Item>
           </Form>
         </div>

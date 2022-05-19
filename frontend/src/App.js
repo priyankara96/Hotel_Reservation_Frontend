@@ -33,6 +33,7 @@ import All_Edit_Data from "./pages/AuthenticationManagement/All_Edit_Data";
 import All_Data from "./pages/AuthenticationManagement/All_Data";
 import Add_Traveller from "./pages/AuthenticationManagement/Add_Traveller";
 import Add_User from "./pages/AuthenticationManagement/Add_User";
+import UserManagementSignin from "./pages/AuthenticationManagement/UserManagementSignin";
 
 //Erandi
 import AddReservation from "./pages/Reservation/AddReservation";
@@ -69,6 +70,7 @@ export default class App extends Component {
               <Route path="/All_Data" exact component={All_Data} />
               <Route path="/Add_Traveller" exact component={Add_Traveller} />
               <Route path="/Add_User" exact component={Add_User} />
+              <Route path="/UserManagementSignin" exact component={UserManagementSignin} />
               {/* End User management */}
 
               {/* Erandi */}
