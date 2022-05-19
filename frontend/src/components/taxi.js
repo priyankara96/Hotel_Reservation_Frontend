@@ -64,14 +64,23 @@ export default class CreatePost extends Component {
   }
 
   render() {
-    return (
+    return (  
+    <>
+    <div> <br/><br/>
+            <div class="row">
+            <div class="col-6">
+            <br/><br/><br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <img src="https://i.pinimg.com/originals/4d/34/2d/4d342de1f39adb766b9b4f98e0f29578.gif" width="70%" height="70%" />
+            </div>
 
-      
-
-      //designing form to get user inputs
-        <div className="col-md-8 mt-4 mx-auto">
-          <h1 className="h3 mb-3 font-weight-normal">Add New </h1>
-          <form className="needs-validation" noValidate>
+            <div class="col-6" >
+            <div class="myformstyle">
+            <div className="card-body" style = {{backgroundColor:'#deedd5',  marginRight:"100px"}}> 
+            <div className="col-md-8 mt-4 mx-auto"> 
+            </div>
+            <h3 className="text-center" > <font face = "Comic sans MS" size ="6" class="text-danger" > Create New </font> </h3> 
+            <form className="needs-validation" noValidate>
             <div className="form-group" style={{marginBottom:'15px'}}>
               <label style={{marginBottom:'5px'}} >Current Location</label>
               <input type="text"
@@ -127,6 +136,8 @@ export default class CreatePost extends Component {
             <button className="ntn btn-success"><a href="/taxihome" style={{ textDecoration: 'none', color: 'white' }}>Taxi Ordered List</a></button>
           
         </div>
+        </div></div></div></div>
+    </>
     )
   }
 }

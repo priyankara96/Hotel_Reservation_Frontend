@@ -67,21 +67,21 @@ function Footer() {
 
 <div class="container">
 <ul class="foote_bottom_ul_amrc">
-<li><a href="http://webenlance.com">Home</a></li>
-<li><a href="http://webenlance.com">About</a></li>
-<li><a href="http://webenlance.com">Services</a></li>
-<li><a href="http://webenlance.com">Pricing</a></li>
-<li><a href="http://webenlance.com">Blog</a></li>
-<li><a href="http://webenlance.com">Contact</a></li>
+<li><a href="">Home</a></li>
+<li><a href="">About</a></li>
+<li><a href="">Services</a></li>
+<li><a href="">Pricing</a></li>
+<li><a href="">Blog</a></li>
+<li><a href="">Contact</a></li>
 </ul>
 
 <p class="text-center">Copyright @2022 | Designed With by <a href="#">star hotels pvt.ltd</a></p>
 
 <ul class="social_footer_ul">
 <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
-<li><a href="http://webenlance.com"><i class="fab fa-twitter"></i></a></li>
-<li><a href="http://webenlance.com"><i class="fab fa-linkedin"></i></a></li>
-<li><a href="http://webenlance.com"><i class="fab fa-instagram"></i></a></li>
+<li><a href=""><i class="fab fa-twitter"></i></a></li>
+<li><a href=""><i class="fab fa-linkedin"></i></a></li>
+<li><a href=""><i class="fab fa-instagram"></i></a></li>
 
 </ul>
 
