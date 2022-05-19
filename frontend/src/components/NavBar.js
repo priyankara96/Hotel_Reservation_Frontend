@@ -4,12 +4,12 @@ import starr from '../images/starr.png'
 class NavBar extends Component{
     render(){
       return(
-      <nav className="navbar navbar-light" style = {{backgroundColor:'#707B7C', margin:"0"}}>
+      <nav className="navbar navbar-light" style = {{backgroundColor:'#707B7C', }}>
       <div className="container-fluid">
        
        
-        <img src={starr} class="rounded-circle" alt="Cinque Terre" style={{width:'120px'}}></img> <a className="navbar-brand" href="/"><h2 style={{marginRight:'1000px', marginTop:'25px'}}>The Star Hotel </h2> &nbsp;</a>
-       
+        <img src={starr} class="rounded-circle" alt="Cinque Terre" style={{width:'120px'}}></img> <a className="navbar-brand" href="/"><h2 style={{marginRight:'950px', marginTop:'15px'}}>The Star Hotel </h2> &nbsp;</a>
+       <a href="/"><i class='far fa-address-card' style={{fontSize:'30px',marginLeft:'1250px'}}></i></a>
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"></span>
         </button>
