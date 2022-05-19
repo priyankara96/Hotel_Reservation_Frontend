@@ -9,7 +9,9 @@ class NavBar extends Component{
        
        
         <img src={starr} class="rounded-circle" alt="Cinque Terre" style={{width:'120px'}}></img> <a className="navbar-brand" href="/"><h2 style={{marginRight:'950px', marginTop:'15px'}}>The Star Hotel </h2> &nbsp;</a>
-       <a href="/"><i class='far fa-address-card' style={{fontSize:'30px',marginLeft:'1250px'}}></i></a>
+       <a href="/"><i class='far fa-address-card' style={{fontSize:'30px',marginLeft:'1200px'}}></i></a>
+       <a href="/"><i class="fa fa-sign-in" aria-hidden="true" style={{fontSize:'30px'}}></i></a>
+       
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"></span>
         </button>
