@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import StripeCheckout from "react-stripe-checkout";
 import axios from "axios";
-import { useParams } from "react-router-dom";
+import { useParams,useHistory } from "react-router-dom";
+import payImage from '../../images/pay.png'
 
 export default function Payments() {
   const publishableKey =
@@ -9,6 +10,7 @@ export default function Payments() {
 
   var priceForStripe = 0;
   const { id } = useParams();
+  const history = useHistory();
 
   const roomPriceInDollars = () => {
     if (id == "Deluxe King Room") {
@@ -36,6 +38,7 @@ export default function Payments() {
       });
       if (response.status === 200) {
         console.log("Your payment is sucessful");
+        history.push('/ViewReservation');
       }
     } catch (error) {
       console.log(error);
@@ -43,13 +46,14 @@ export default function Payments() {
   };
 
   return (
-    <div>
+    <div><br/><br/>
+    <div className='payment-container'>
       <center>
         <br />
         <br />
         <h3>Pre-payments are required for all types of King Rooms !</h3>
         <br />
-        <br />
+        
         <StripeCheckout
           stripeKey={publishableKey}
           label="Pay Now"
@@ -60,7 +64,10 @@ export default function Payments() {
           description={`Your total is $${priceForStripe * 100}`}
           token={payNow}
         />
+        <br/><br/>
+        <img src={payImage} className='payImage'/>
       </center>
+    </div>
     </div>
   );
 }

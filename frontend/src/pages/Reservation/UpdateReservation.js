@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import useRequest from "../../services/RequestContext";
 import { useParams, useHistory } from "react-router-dom";
+import reserveImage from "../../images/updatereserve.jpg";
+import Swal from 'sweetalert2'
 
 export default function UpdateReservation() {
   const [loading, setLoading] = useState(false);
@@ -15,6 +17,7 @@ export default function UpdateReservation() {
 
   const { request } = useRequest();
   const { id } = useParams();
+  const history = useHistory();
 
   const HandleOnChange = (e) => {
     e.persist();
@@ -49,6 +52,9 @@ export default function UpdateReservation() {
     try {
       const result = await request.put(`reservations/${data._id}`, data);
       console.log("api call reservation updated", result);
+      Swal.fire('Reservation Updated Successfully !')
+      history.push('/ViewReservation');
+      window.location.reload(true);
     } catch (e) {
       console.log("update error ", e);
     }
@@ -56,10 +62,11 @@ export default function UpdateReservation() {
 
   return (
     <div className="reservation-container">
+      <img src={reserveImage} className="reserveimg" />
       <div className="container-sm">
         <form>
           <center>
-            <h1>Add Reservation</h1>
+            <h1>Update Reservation</h1>
             <br />
             <label>Room Type</label>
             <select
@@ -69,14 +76,13 @@ export default function UpdateReservation() {
               value={data.roomType}
               onChange={(e) => HandleOnChange(e)}
             >
-              <option selected>Select Room Type</option>
-              <option value="Deluxe">Deluxe</option>
-              <option value="Standard">Standard</option>
-              <option value="Twin">Twin</option>
+              <option value="Deluxe King Room">Deluxe King Room</option>
+              <option value="Deluxe Twin Room">Deluxe Twin Room</option>
+              <option value="Premier King Room">Premier King Room</option>
+              <option value="Premier Twin Room">Premier Twin Room</option>
+              <option value="Signature King Room">Signature King Room</option>
             </select>
-            <br />
-            <br />
-
+         
             <label>CheckIn Date</label>
             <input
               type="date"
@@ -86,9 +92,7 @@ export default function UpdateReservation() {
               value={data.checkIn}
               onChange={(e) => HandleOnChange(e)}
             />
-            <br />
-            <br />
-
+           
             <label>CheckOut Date</label>
             <input
               type="date"
@@ -98,9 +102,7 @@ export default function UpdateReservation() {
               value={data.checkOut}
               onChange={(e) => HandleOnChange(e)}
             />
-            <br />
-            <br />
-
+           
             <label>Number Of Rooms</label>
             <input
               type="number"
@@ -110,9 +112,7 @@ export default function UpdateReservation() {
               value={data.noOfRooms}
               onChange={(e) => HandleOnChange(e)}
             />
-            <br />
-            <br />
-
+           
             <label>Number Of Kids</label>
             <input
               type="number"
@@ -122,9 +122,7 @@ export default function UpdateReservation() {
               value={data.noOfKids}
               onChange={(e) => HandleOnChange(e)}
             />
-            <br />
-            <br />
-
+          
             <label>Number Of Kids</label>
             <input
               type="number"
@@ -134,9 +132,8 @@ export default function UpdateReservation() {
               value={data.noOfAdults}
               onChange={(e) => HandleOnChange(e)}
             />
-            <br />
-            <br />
-
+          
+          <br/><br/>
             <button
               type="submit"
               class="btn btn-primary"
@@ -144,9 +141,34 @@ export default function UpdateReservation() {
             >
               Update
             </button>
+            
+            <br/><br/><br/>
           </center>
         </form>
       </div>
+      <br />
+      <br />
+      <br /> <br />
+      <br />
+      <br /> <br />
+      <br />
+      <br /> <br />
+      <br />
+      <br /> <br />
+      <br />
+      <br /> <br />
+      <br />
+      <br /> <br />
+      <br />
+      <br /> <br />
+      <br />
+      <br /> <br />
+      <br />
+      <br /> <br />
+      <br />
+      <br /> <br />
+      <br />
+      <br />
     </div>
   );
 }
