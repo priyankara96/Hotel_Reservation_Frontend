@@ -201,7 +201,7 @@ function SignupTraveller() {
                 Submit
               </Button>
               {/* </Link> */}
-              &nbsp;
+              &nbsp; 
               <Button href="/" type="button" class="btn btn-outline-secondary" style={{marginLeft:"0px"}} > Cancel </Button>
             </Form.Item>
           </Form>
