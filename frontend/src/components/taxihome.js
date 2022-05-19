@@ -60,7 +60,7 @@ class Home extends Component {
     return (
 
       <div className="container">
-        <h> Order Form </h>
+        {/* <h> Order Form </h>
         <div className="col-lg-3 mt-2 mb-2">
           <input
             className="form-control"
@@ -71,7 +71,7 @@ class Home extends Component {
 
           </input>
 
-        </div>
+        </div> */}
         <table class="table">
           <thead>
             <tr>
@@ -81,6 +81,7 @@ class Home extends Component {
               <th scope="col">Destination</th>
               <th scope="col">Type Of Vehicle</th>
               <th scope="col">No Of PAssengers</th>
+              <th scope="col">Action</th>
             </tr>
           </thead>
           <tbody>
@@ -115,7 +116,7 @@ class Home extends Component {
           <br/>
           <br/>
           
-          <button className="ntn btn-success"><a href="/taxi" style={{ textDecoration: 'none', color: 'white' }}>Add new Recipe</a></button>
+          <button className="ntn btn-success"><a href="/taxi" style={{ textDecoration: 'none', color: 'white' }}>Request To Taxi</a></button>
         </table>
 
       </div>
