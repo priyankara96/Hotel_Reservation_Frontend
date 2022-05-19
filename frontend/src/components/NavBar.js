@@ -7,7 +7,9 @@ class NavBar extends Component{
       <nav className="navbar navbar-light" style = {{backgroundColor:'#707B7C', margin:"0"}}>
       <div className="container-fluid">
        
+       
         <img src={starr} class="rounded-circle" alt="Cinque Terre" style={{width:'120px'}}></img> <a className="navbar-brand" href="/"><h2 style={{marginRight:'1000px', marginTop:'25px'}}>The Star Hotel </h2> &nbsp;</a>
+       
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"></span>
         </button>

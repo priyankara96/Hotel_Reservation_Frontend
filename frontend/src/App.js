@@ -17,6 +17,9 @@ import Homes from "./components/Homes";
 import NavBar from "./components/NavBar";
 import Card from "./components/Card";
 import Footer from "./components/Footer";
+import taxi from "./components/taxi";
+import taxipost from "./components/taxipost";
+import taxihome from "./components/taxihome";
 
 //Priyankara
 import SignupAdmin from "./pages/AuthenticationManagement/AdminSignup";
@@ -108,8 +111,11 @@ export default class App extends Component {
               <Route path="/aboutus" exact component={Aboutus}></Route>
               {/* Chanduni */}
 
-              {/* Nipuna */}
+             {/* Nipuna */}
               <Route path="/" exact component={Homes}></Route>
+              <Route path="/taxi" exact component={taxi}></Route>
+              <Route path="/taxipost" exact component={taxipost}></Route>
+              <Route path="/taxihome" exact component={taxihome}></Route>
               <div style={{ paddingTop: "100px", width: "100%" }}>
                 <Footer></Footer>
               </div>

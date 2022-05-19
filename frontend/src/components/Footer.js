@@ -8,18 +8,19 @@ function Footer() {
 <div class="container bottom_border">
 <div class="row">
 <div class=" col-sm-4 col-md col-sm-4  col-12 col">
-<h5 class="headin5_amrc col_white_amrc pt2">Find us</h5>
+{/* <h5 class="headin5_amrc col_white_amrc pt2">Find us</h5>
 
-<p class="mb10">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+<p class="mb10">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p> */}
 <p><i class="fa fa-location-arrow"></i> 9878/25 sec 9 rohini 35 </p>
 <p><i class="fa fa-phone"></i>  +91-9999878398  </p>
 <p><i class="fa fa fa-envelope"></i> info@example.com  </p>
-
+<p><i class="material-icons" style={{color:'white', fontSize:'15px'}}>edit_location</i> No 580, The Star Hotel, Colombo 07.</p>
+     
 
 </div>
 
 
-<div class=" col-sm-4 col-md  col-6 col">
+{/* <div class=" col-sm-4 col-md  col-6 col">
 <h5 class="headin5_amrc col_white_amrc pt2">Quick links</h5>
 
 <ul class="footer_ul_amrc">
@@ -31,10 +32,10 @@ function Footer() {
 <li><a href="http://webenlance.com">Image Cropping</a></li>
 </ul>
 
-</div>
+</div> */}
 
 
-<div class=" col-sm-4 col-md  col-6 col">
+{/* <div class=" col-sm-4 col-md  col-6 col">
 <h5 class="headin5_amrc col_white_amrc pt2">Quick links</h5>
 
 <ul class="footer_ul_amrc">
@@ -46,10 +47,10 @@ function Footer() {
 <li><a href="http://webenlance.com">Image Cropping</a></li>
 </ul>
 
-</div>
+</div> */}
 
 
-<div class=" col-sm-4 col-md  col-12 col">
+{/* <div class=" col-sm-4 col-md  col-12 col">
 <h5 class="headin5_amrc col_white_amrc pt2">Follow us</h5>
 
 
@@ -59,7 +60,7 @@ function Footer() {
 <li><a href="#"><i class="fab fa-twitter fleft padding-right"></i> </a><p>Lorem Ipsum is simply dummy text of the printing...<a href="#">https://www.lipsum.com/</a></p></li>
 </ul>
 
-</div>
+</div> */}
 </div>
 </div>
 
@@ -74,14 +75,14 @@ function Footer() {
 <li><a href="http://webenlance.com">Contact</a></li>
 </ul>
 
-<p class="text-center">Copyright @2017 | Designed With by <a href="#">Your Company Name</a></p>
+<p class="text-center">Copyright @2022 | Designed With by <a href="#">star hotels pvt.ltd</a></p>
 
 <ul class="social_footer_ul">
 <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
 <li><a href="http://webenlance.com"><i class="fab fa-twitter"></i></a></li>
 <li><a href="http://webenlance.com"><i class="fab fa-linkedin"></i></a></li>
 <li><a href="http://webenlance.com"><i class="fab fa-instagram"></i></a></li>
- <i class='fa fa-facebook-f blue-color'></i>
+
 </ul>
 
 </div>
