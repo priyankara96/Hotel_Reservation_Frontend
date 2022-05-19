@@ -32,3 +32,28 @@
     height: 35px;
     width: 300px;
 }
+.payment-container{
+   
+    border: 4px solid black;
+   padding-bottom: 2%;
+   width: 45%;
+   margin-left: 26%;
+    border-radius: 20px;
+}
+.view-reservation-container .btn-warning{
+    display: inline-block;
+    margin-bottom: 10px;
+    width: 50px;
+    margin:5px;
+    height: 30px;
+    padding-bottom: 30px;
+}
+.view-reservation-container .btn-danger{
+    
+        display: inline-block;
+        margin-bottom: 10px;
+        width: 50px;
+        margin:5px;
+        height: 30px;
+        padding-bottom: 30px;
+}

@@ -3,6 +3,7 @@ import useRequest from "../../services/RequestContext";
 import "./reservation.css";
 import { useHistory } from "react-router-dom";
 import reserveImage from "../../images/reserve.jpg";
+import Swal from 'sweetalert2'
 
 export default function AddReservation() {
   const [data, setData] = useState({
@@ -35,33 +36,40 @@ export default function AddReservation() {
     });
   };
 
+  function handleClick() {
+    history.push(`/PaymentGateway/${data.roomType}`);
+  }
+
   //add reservation
   const { request } = useRequest();
 
   const onFinish = async (values) => {
     try {
       const result = await request.post("reservations", data);
-      alert("Successfully Reserved !");
+      Swal.fire('Reservation Added Successfully !')
       if (
         data.roomType === "Signature King Room" ||
         data.roomType === "Deluxe King Room" ||
         data.roomType === "Premier King Room"
       ) {
-        history.push(`/PaymentGateway/${data.roomType}`);
-       //redirect();
-        window.location.reload(true);
+      handleClick();
       } else {
-        history.push("/");
-        window.location.reload(true);
+        Swal.fire({
+          title: 'You Can Pay on Property!',
+          text: 'Modal with a custom image.',
+          imageUrl: 'https://www.berjayahotel.com/sites/default/files/colombo_2.jpg',
+          imageWidth: 400,
+          imageHeight: 200,
+          imageAlt: 'Custom image',
+        })
+       
       }
     } catch (e) {
       alert("Error in Reservation !");
     }
   };
 
-  const redirect = () => {
-    history.push(`/PaymentGateway/${data.roomType}`);
-  };
+
 
   return (
     <div className="reservation-container">
