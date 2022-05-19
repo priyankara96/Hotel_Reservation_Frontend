@@ -25,7 +25,7 @@ export default class MainDashboard extends Component {
              <div class="card-block" ><br/>
              <img  style={{height: 130, width: 180}} class="rounded-circle" src="http://st2.depositphotos.com/3591429/7168/i/450/depositphotos_71683555-Register-Membership-Application-Registration-Join-Office-Browsin.jpg" alt="Card image cap"/>
                <h4 class="card-title"></h4>                
-               <Button class="btn btn btn-outline-light, hidden-md-up" ><a href="/UserManagement" style={{ textDecoration: 'none', color: 'Info' }}>
+               <Button class="btn btn btn-outline-light, hidden-md-up" ><a href="/UserManagementSignin" style={{ textDecoration: 'none', color: 'Info' }}>
                    User Management </a>
                </Button>
              </div>
@@ -37,7 +37,7 @@ export default class MainDashboard extends Component {
              <div class="card-block" ><br/>
              <img  style={{height: 130, width: 180}} class="rounded-circle" src="https://t4.ftcdn.net/jpg/01/27/43/89/360_F_127438985_7Ch9IEDTCfiWmnGtWYJXSKFPjtajVgNT.jpg" alt="Card image cap"/>
                <h4 class="card-title"></h4>                
-               <Button class="btn btn btn-outline-light, hidden-md-up" ><a href="/rooms" style={{ textDecoration: 'none', color: 'Info' }}>
+               <Button class="btn btn btn-outline-light, hidden-md-up" ><a href="/RoomManagement" style={{ textDecoration: 'none', color: 'Info' }}>
                    Room Management </a>
                </Button>
              </div>
@@ -49,8 +49,8 @@ export default class MainDashboard extends Component {
              <div class="card-block" ><br/>
              <img  style={{height: 130, width: 180}} class="rounded-circle" src="https://milgrasp.com/img/sections/features/user_management2.jpg" alt="Card image cap"/>
                <h4 class="card-title"></h4>                
-               <Button class="btn btn btn-outline-light, hidden-md-up" ><a href="/mail" style={{ textDecoration: 'none', color: 'Info' }}>
-                   Customer Care </a>
+               <Button class="btn btn btn-outline-light, hidden-md-up" ><a href="/Management" style={{ textDecoration: 'none', color: 'Info' }}>
+                   Name 3 </a>
                </Button>
              </div>
            </div>

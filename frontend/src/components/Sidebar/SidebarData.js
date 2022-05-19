@@ -21,28 +21,9 @@ export const SidebarDataStock = [
 
   {
     title: 'User Management', 
-    path: '#',
-    icon: <AiIcons.AiOutlineSetting />,
-    iconClosed: <RiIcons.RiArrowDownSFill />,
-    iconOpened: <RiIcons.RiArrowUpSFill />,
+    path: '/UserManagementSignin',
+    icon: <AiIcons.AiOutlineSetting />
 
-    subNav: [
-      {  
-        title: 'Add Traveller',
-        path: '/Add_Traveller',
-        icon: <AiIcons.AiOutlinePlusCircle />
-      },
-      {
-        title: 'Add User',
-        path: '/Add_User',
-        icon: <AiIcons.AiOutlinePlusCircle />
-      },
-      {
-        title: 'Details of all Users',
-        path: '/All_Data',
-        icon: <AiIcons.AiOutlinePlusCircle />
-      }
-    ]
   }, // End User management
 
 

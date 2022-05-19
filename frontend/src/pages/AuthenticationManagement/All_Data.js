@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import { Button } from "antd";
 import Sidebar from '../../components/Sidebar/Sidebar';
 
 const Exercise = props => ( 
@@ -87,11 +88,12 @@ export default class ExercisesList extends Component {
         return ( 
             <>
             <Sidebar />
-            <div style={{marginLeft:"50px", marginRight:"50px"}}>
+            <div style={{marginLeft:"50px", marginRight:"50px", marginTop:"10px"}}>
+            <Button href="/UserManagement" type="button" class="btn btn-outline-secondary" style={{marginLeft:"0px"}} > Back </Button>
             <div className = "row" >
-
+            
                 <div className = "col-lg-9 mt-2 mb-2" >
-                    <h3 > Details of all Users </h3> 
+                <h3 > Details of all Users </h3> 
                 </div > 
 
                     <div className = "col-lg-3 mt-2 mb-2" >

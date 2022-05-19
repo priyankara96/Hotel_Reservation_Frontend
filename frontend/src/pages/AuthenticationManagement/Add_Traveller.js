@@ -50,6 +50,7 @@ function Add_Travelle() {
     <>
     <Sidebar />
     <div className style={{ backgroundImage: 'url("https://i5.walmartimages.com/asr/bad42561-78b0-4554-9aeb-f7bb5ce08905_1.6f69634b642562a7fc785d666eeacb70.jpeg")', backgroundSize: 'cover'}}>
+    
       <div className="main-container-signup">
         <div className="form-common">
           <h1>Add Traveller</h1>
@@ -202,6 +203,8 @@ function Add_Travelle() {
                 Submit
               </Button>
               {/* </Link> */}
+              &nbsp;
+              <Button href="/UserManagement" type="button" class="btn btn-outline-secondary" style={{marginLeft:"0px"}} > Cancel </Button>
             </Form.Item>
           </Form>
         </div>

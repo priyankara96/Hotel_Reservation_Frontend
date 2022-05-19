@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import swal from "sweetalert";
 import Sidebar from '../../components/Sidebar/Sidebar';
 
 export default class EditExercise extends Component {
@@ -123,7 +124,7 @@ export default class EditExercise extends Component {
 
     onSubmit(e) {
         e.preventDefault();
-
+        const {name,name1,nic,email,number,role,inputpw} = this.state;
         const exercise = {
             name: this.state.name,
             name1: this.state.name1,
@@ -137,13 +138,43 @@ export default class EditExercise extends Component {
         }
 
         console.log(exercise);
+        //validation
+        
+        const cuem = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        
+
+        if (name.length < 4)  {
+            swal("First Name invalid !", "length shuld be greater than 4", "error");
+        } else if (name1.length < 4)  {
+            swal("Last Name invalid !", "length shuld be greater than 4", "error");
+        } else if (nic.length < 9)  {
+            swal("NIC Number invalid !", "length shuld be greater than 9", "error");
+        } else if ((!cuem.test(String(email)))) {
+            swal("Invalid email address !", "Please enter valid email address", "error");
+        } else if (number.length < 4)  {
+            swal("Invalid Contact Number !", "contact number should be valide pattern", "error");
+        } else if (role.length < 4)  {
+            swal("Role invalid !", "length shuld be greater than 4", "error");
+        } else if (inputpw.length < 4)  {
+            swal("Password invalid !", "length shuld be greater than 4", "error");
+        } 
+        else {
 
         axios.put('http://localhost:8000/AllData/update/' + this.props.match.params.id, exercise)
         .then(res => console.log(res.data));
-        alert("Edit Successfully")
+        // alert("Edit Successfully")
         
-        window.location = '/All_Data';
+        swal({
+            title: "Done!",
+            text: "Customer Successfully Added",
+            icon: "success",
+            button: "Okay!"
+        })
+        .then((value) => {
+            window.location = '/All_Data';
+        });
     }
+}
 
     render() {
         return ( 
@@ -246,10 +277,10 @@ export default class EditExercise extends Component {
                     
                     <div className = "form-group" style={{marginTop:'15px', marginLeft:'200px'}} >
                     <input type = "submit"
-                    value = "Edit"
+                    value = "Update"
                     className = "btn btn-success" />
                     </div> 
-
+                    <a href="/All_Data"> <button type="button" class="btn btn-warning" style={{marginLeft:'200px'}} > Cansal&nbsp; </button></a>
                     <br/>
                 </form>
 
