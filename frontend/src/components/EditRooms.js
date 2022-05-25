@@ -97,6 +97,11 @@ componentDidMount(){
           <a href="/rooms"style={{ textDecoration: 'none', color: 'white' }}>
               Back
               </a></button>
+              <div className="row">
+                <div className="col-3">
+              <img src= 'https://www.pngall.com/wp-content/uploads/5/Hotel-Transparent.png' style={{width:'600px'}}/>
+              </div>
+              <div className="col-9">
       <div className="align">
       <div className='card card1' style={{width:"600px"}}>
 
@@ -178,7 +183,7 @@ componentDidMount(){
       </button>
       </div>
 
-
+</div></div>
     </div>
     )
   }
