@@ -135,14 +135,15 @@ export default class ClientRoom extends Component {
             <br/>
 
 
- <button className="btn btn-success"><a href="/Availability" style={{textDecoration:'none',color:'white'}}>Reserve Now</a></button>
-
 
          
           </table>
-          <div className='center'>
-          <button className="btn btn-success "><a href='' style={{color:'white'}}>Check Availability</a></button>
-          <br></br>
+          <div className='btnAlign'>
+         
+          <br/>
+          
+
+ <button className="btn btn-success"><a href="/Availability" style={{textDecoration:'none',color:'white'}}>Reserve Now</a></button> &nbsp; &nbsp; &nbsp;
            <button className="btn btn-success "><a href='/taxi' style={{color:'white'}}>Request to Taxi </a></button>
           </div>
           </div>
