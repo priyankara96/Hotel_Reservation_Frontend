@@ -50,11 +50,13 @@ export default function UpdateReservation() {
 
   const onFinish = async (values) => {
     try {
-      const result = await request.put(`reservations/${data._id}`, data);
-      console.log("api call reservation updated", result);
-      Swal.fire('Reservation Updated Successfully !')
-      history.push('/ViewReservation');
-      window.location.reload(true);
+      const result = request.put(`reservations/${data._id}`, data);
+      
+      if(result){
+        Swal.fire('Reservation Updated Successfully !')
+        history.push('/ViewReservation');
+       
+      }
     } catch (e) {
       console.log("update error ", e);
     }

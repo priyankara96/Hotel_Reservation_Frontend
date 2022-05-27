@@ -15,7 +15,7 @@ export default class HomeRooms extends Component {
     this.retrievePosts();
   }
   retrievePosts(){
-    axios.get("http://localhost:8000/rooms").then(res =>{
+    axios.get("http://192.168.8.195:8280/rooms/GetRooms").then(res =>{
       if(res.data.success){
         this.setState({
           posts:res.data.existingPosts

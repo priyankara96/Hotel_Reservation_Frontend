@@ -16,7 +16,7 @@ class Home extends Component {
 
   retrievePosts() {
     //retriving all entered information 
-    axios.get("http://localhost:8000/taxi").then(res => {
+    axios.get("http://192.168.8.195:8280/taxi/getTaxi").then(res => {
       if (res.data.success) {
         this.setState({
           posts: res.data.existingPosts
