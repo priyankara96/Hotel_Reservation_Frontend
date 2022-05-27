@@ -28,7 +28,7 @@ class Home extends Component {
 
   onDelete = (id) => {
     //implementation of method deletion by specific id
-    axios.delete(`/post/delete/${id}`).then((res) => {
+    axios.delete(`http://localhost:8000/taxi/delete/${id}`).then((res) => {
       alert("delete successfully");
       this.retrievePosts();
     })
@@ -49,7 +49,7 @@ class Home extends Component {
   handleSearchArea = (e) => {
     const searchKey = e.currentTarget.value;
 
-    axios.get("posts").then(res => {
+    axios.get("http://localhost:8000/taxi").then(res => {
       if (res.data.success) {
 
         this.filterData(res.data.existingPosts, searchKey)
@@ -92,7 +92,7 @@ class Home extends Component {
                   <th scope="row">{index + 1}</th>
                   <td>
                     <a href={`/post/${posts._id}`} style={{ textDecoration: 'none' }}>
-                      {posts.vehicle}
+                      {posts.location}
                     </a>
                   </td>
                   <td>{posts.destination}</td>
