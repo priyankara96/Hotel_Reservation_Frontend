@@ -29,31 +29,27 @@ export const SidebarDataStock = [
 
   // 2nd
   {
-    title: 'BBBB', // 
-    path: '#',
+    title: 'Room Management', // 
+    path: '/rooms',
     icon: <IoIcons.IoIosPaper />,
     iconClosed: <RiIcons.RiArrowDownSFill />,
     iconOpened: <RiIcons.RiArrowUpSFill />,
 
     subNav: [
       {  
-        title: '1',
-        path: '/',
+        title: 'Add Room',
+        path: '/rooms/add',
         icon: <IoIcons.IoIosPaper />
       },
-      {
-        title: '2',
-        path: '/',
-        icon: <IoIcons.IoIosPaper />
-      }
+     
     ]
   },
 
 // 3rd
 
 {
-  title: 'CCC', // 
-  path: '#',
+  title: 'Taxi Request', // 
+  path: '/taxihome',
   icon: <IoIcons.IoIosPaper />,
   iconClosed: <RiIcons.RiArrowDownSFill />,
   iconOpened: <RiIcons.RiArrowUpSFill />,
@@ -75,8 +71,8 @@ export const SidebarDataStock = [
 //4th
 
 {
-  title: 'DDDD', // 
-  path: '#',
+  title: 'Email', // 
+  path: '/mail',
   icon: <IoIcons.IoIosPaper />,
   iconClosed: <RiIcons.RiArrowDownSFill />,
   iconOpened: <RiIcons.RiArrowUpSFill />,
