@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import "./styles1.css";
+import { height } from '@mui/system';
 
 export default class RoomDetails extends Component {
   constructor(props){
@@ -49,7 +50,7 @@ export default class RoomDetails extends Component {
             <dd className="col-sm-9">{Availability}</dd>
             
           </dl>
-          <img src='https://www.freeiconspng.com/thumbs/hotel-png/hotel-png-4.png'/>
+          <img src='http://www.nextgenhotel.co.tz/book-now/room.gif' style={{borderRadius:'50px', height:"400px"}}/>
         </div>
     )
   }
