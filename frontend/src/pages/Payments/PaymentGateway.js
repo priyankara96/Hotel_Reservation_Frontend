@@ -1,8 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import StripeCheckout from "react-stripe-checkout";
 import axios from "axios";
 import { useParams,useHistory } from "react-router-dom";
 import payImage from '../../images/pay.png'
+import Swal from 'sweetalert2'
 
 export default function Payments() {
   const publishableKey =
@@ -37,7 +38,11 @@ export default function Payments() {
         },
       });
       if (response.status === 200) {
-        console.log("Your payment is sucessful");
+        Swal.fire(
+          'Successful!',
+          'Your Have Successfully Reserved Your King Rooms.',
+          'success'
+        )
         history.push('/ViewReservation');
       }
     } catch (error) {
@@ -61,7 +66,7 @@ export default function Payments() {
           billingAddress
           shippingAddress
           amount={priceForStripe * 100}
-          description={`Your total is $${priceForStripe * 100}`}
+          description={`Your total is $${priceForStripe}`}
           token={payNow}
         />
         <br/><br/>

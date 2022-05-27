@@ -15,7 +15,7 @@ export default class ClientRoom extends Component {
         this.retrievePosts();
       }
       retrievePosts(){
-        axios.get("http://localhost:8000/rooms").then(res =>{
+        axios.get("http://192.168.8.195:8280/rooms/GetRooms").then(res =>{
           if(res.data.success){
             this.setState({
               posts:res.data.existingPosts
@@ -135,13 +135,14 @@ export default class ClientRoom extends Component {
             <br/>
 
 
- <button className="btn btn-success"><a href="/Availability" style={{textDecoration:'none',color:'white'}}>Reserve Now</a></button>
+ 
 
 
          
           </table>
           <div className='center'>
-          <button className="btn btn-success "><a href='' style={{color:'white'}}>Check Availability</a></button>
+          <button className="btn btn-success"><a href="/Availability" style={{textDecoration:'none',color:'white'}}>Reserve Now</a></button>
+          
           <br></br>
            <button className="btn btn-success "><a href='/taxi' style={{color:'white'}}>Request to Taxi </a></button>
           </div>

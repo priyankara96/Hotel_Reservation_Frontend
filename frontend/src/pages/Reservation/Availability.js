@@ -9,7 +9,7 @@ export default function Availability() {
   const fetchReservations = async () => {
     setLoading(true);
     try {
-      const result = await axios.get(`http://localhost:8000/reservations`);
+      const result = await axios.get(`http://192.168.8.195:8280/reservations/GetReservations`);
       if (result.status === 200) {
         setReservation(result.data);
       }
