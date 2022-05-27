@@ -31,7 +31,7 @@ export default class ExercisesList extends Component {
     }
 
     componentDidMount() {
-        axios.get('http://localhost:8000/CommonSignup/')
+        axios.get('http://192.168.8.195:8280/users/getUsers')
             .then(response => {
                 this.setState({ exercises: response.data })
             })

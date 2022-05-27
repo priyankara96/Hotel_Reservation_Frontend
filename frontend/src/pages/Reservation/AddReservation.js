@@ -36,7 +36,7 @@ export default function AddReservation() {
     });
   };
 
-  function handleClick() {
+  const handleClick = () =>  {
     history.push(`/PaymentGateway/${data.roomType}`);
   }
 
@@ -45,7 +45,8 @@ export default function AddReservation() {
 
   const onFinish = async (values) => {
     try {
-      const result = await request.post("reservations", data);
+      const result =  request.post("reservations", data);
+      if(result){
       Swal.fire('Reservation Added Successfully !')
       if (
         data.roomType === "Signature King Room" ||
@@ -56,14 +57,14 @@ export default function AddReservation() {
       } else {
         Swal.fire({
           title: 'You Can Pay on Property!',
-          text: 'Modal with a custom image.',
           imageUrl: 'https://www.berjayahotel.com/sites/default/files/colombo_2.jpg',
           imageWidth: 400,
           imageHeight: 200,
           imageAlt: 'Custom image',
         })
-       
+        history.push('/ViewReservation');
       }
+    }
     } catch (e) {
       alert("Error in Reservation !");
     }
