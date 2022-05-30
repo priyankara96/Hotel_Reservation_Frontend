@@ -10,7 +10,7 @@ Assignment 2 – REST API
 </p>
 
 <p>
-This is a project done for the Information Technology Project module of BSc(Hons) Degree in Information Technology in Sri Lanka Institute of Information Technology.  
+This is a project done for the Distributed Systems module of BSc(Hons) Degree in Information Technology in Sri Lanka Institute of Information Technology.  
 </p>
 
 <h2>About this project</h2>
