@@ -6,7 +6,7 @@ Assignment 2 – REST API
 <h1 align="center">~~ Hotel Reservation System ~~</h1>
 
 <p align="center">
-<img src="https://user-images.githubusercontent.com/88779731/170926344-9352d2e3-09e0-4cb5-b41b-9897d701542c.png" width="250" height="100"/>
+<img src="https://user-images.githubusercontent.com/88779731/170926344-9352d2e3-09e0-4cb5-b41b-9897d701542c.png" width="250" height="200"/>
 </p>
 
 <p>
