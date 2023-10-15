@@ -28,7 +28,7 @@
     "react-stripe-checkout": "^2.6.3",
     "styled-components": "^5.3.5",
     "sweetalert": "^2.1.2",
-    "sweetalert2": "^11.4.14",
+    "sweetalert2": "^11.7.28",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
